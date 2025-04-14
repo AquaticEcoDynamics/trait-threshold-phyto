@@ -3,7 +3,7 @@ library(dplyr)
 library(readr)
 
 # Read the CSV file
-phyto_data <- read_csv("Phyto_HN.csv")
+phyto_data <- read_csv("Data_HN_Phytoplankton_SWC_13_3_2025.csv")
 
 # Clean up and select the needed columns
 phyto_data <- phyto_data %>%
@@ -29,11 +29,4 @@ phyto_wide_log <- phyto_wide %>%
   ))
 
 write.csv(phyto_wide_log, file = "Phyto_HN_wide_log.csv")
-# Read the CSV file, skipping the first row (which contains row names)
-wq_data <- read.csv("Z:/Hawkesbury/Vuong/Package_1/Paper 1/Revision/2_round_revision/Data_Code_for_Paper/Stage_1_Data/Water_quality.csv", header = FALSE, skip = 1)
 
-# Define the correct column names
-colnames(wq_data) <- c("Calendar Date", "TN", "TP", "SAL", "TEMP", "AMM", "NIT", "FRP", "SIL", "TSS", "TOC", "TURB", "CHLA", "Site Code")
-
-write.csv(wq_data, file = "Water_quality_data.csv")
-# Check the first few rows
