@@ -9,7 +9,7 @@ library(dplyr)
 
 # #Import Input for TITAN
 #load("TITAN_data.Rdata") 
-data <- read.csv("HN_PHY_WQ_DATA_log.csv")
+data <- read.csv("HN_PHY_WQ_DATA_log_1.csv")
 
 colnames(data)
 #Taxa community: 15 - 191
